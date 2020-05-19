@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "/source/live2d-widget/";
+const live2d_path = "http://asamuq.work/live2d-widget/live2d.min.js";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
