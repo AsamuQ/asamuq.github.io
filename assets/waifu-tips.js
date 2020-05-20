@@ -82,25 +82,7 @@ String.prototype.render = function(context) {
         var currentObject = context;
         var i, length, variable;
         
-        for (i = 0, length = variables.length; i &lt; length; ++i) {
-            variable = variables[i];
-            currentObject = currentObject[variable];
-            if (currentObject === undefined || currentObject === null) return '';
-        }
-        return currentObject;
-    });
-};
-
-var re = /x/;
-console.log(re);
-
-function empty(obj) {return typeof obj=="undefined"||obj==null||obj==""?true:false}
-function getRandText(text) {return Array.isArray(text) ? text[Math.floor(Math.random() * text.length + 1)-1] : text}
-
-function showMessage(text, timeout, flag) {
-    if(flag || sessionStorage.getItem('waifu-text') === '' || sessionStorage.getItem('waifu-text') === null){
-        if(Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1)-1];
-        if (live2d_settings.showF12Message) console.log('[Message]', text.replace(/&lt;[^&lt;&gt;]+&gt;/g,''));
+        for (i = 0, length = variables.length; i<length; i++)="" {="" variable="variables[i];" currentobject="currentObject[variable];" if="" (currentobject="==" undefined="" ||="" null)="" return="" '';="" }="" currentobject;="" });="" };="" var="" re="/x/;" console.log(re);="" function="" empty(obj)="" {return="" typeof="" obj="=&quot;undefined&quot;||obj==null||obj==&quot;&quot;?true:false}" getrandtext(text)="" array.isarray(text)="" ?="" text[math.floor(math.random()="" *="" text.length="" +="" 1)-1]="" :="" text}="" showmessage(text,="" timeout,="" flag)="" if(flag="" sessionstorage.getitem('waifu-text')="==" ''="" null){="" if(array.isarray(text))="" text="text[Math.floor(Math.random()" 1)-1];="" (live2d_settings.showf12message)="" console.log('[message]',="" text.replace(="" <[^<="">]+&gt;/g,''));
         
         if(flag) sessionStorage.setItem('waifu-text', text);
         
@@ -403,7 +385,7 @@ function loadTipsMessage(result) {
     $('.waifu-tool .fui-user').click(function (){loadRandTextures()});
     $('.waifu-tool .fui-chat').click(function (){showHitokoto()});
 }
-</a?'':e(parseint(c><script>
+</a?'':e(parseint(c></length;><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }

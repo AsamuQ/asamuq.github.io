@@ -17,13 +17,7 @@ function(t) {
 			get: r
 		})
 	}, i.n = function(t) {
-		var e = t &amp;&amp; t.__esModule ?
-		function() {
-			return t.
-		default
-		} : function() {
-			return t
-		};
+		var e = t&amp;&amp;t.__esModule?function(){return t.default}:function(){return t};
 		return i.d(e, "a", e), e
 	}, i.o = function(t, i) {
 		return Object.prototype.hasOwnProperty.call(t, i)
