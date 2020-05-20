@@ -28,14 +28,12 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 	
 	<!-- 看板娘依赖 -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://asamuq.work/live2d-widget/assets/waifu.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="/libs/jquery/jquery.min.js"></script>
 	
-	  <!--自定义看板娘-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-    <script src="http://asamuq.work/live2d-widget/autoload.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
 
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
@@ -509,7 +507,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/2.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/3.jpg)');
 </script>
 
 
@@ -696,7 +694,7 @@
     
     
     <div class="col s12" >
-        <div class="post-card" style="background-image: url('/source/images/author.jpg')">
+        <div class="post-card" style="background-image: url('/images/author.jpg')">
             <div class="post-body">
                 <div class="post-categories">
                     
@@ -739,7 +737,7 @@
                     <a href="/2020/05/17/test-article/">
                         <div class="card-image">
                             
-                            <img src="/source/images/author.jpg" class="responsive-img" alt="测试文章">
+                            <img src="/images/author.jpg" class="responsive-img" alt="测试文章">
                             
                             <span class="card-title">测试文章</span>
                         </div>
@@ -830,6 +828,24 @@
         </div>
     </article>
 
+	<!--看板娘首页测试-->
+	<div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+	<script src="http://asamuq.work/live2d-widget/assets/waifu-tips.js"></script>
+	<script src="http://asamuq.work/live2d-widget/assets/live2d.js"></script>
+	<script type="text/javascript">initModel("assets/")</script>
+	
 </main>
 
 
