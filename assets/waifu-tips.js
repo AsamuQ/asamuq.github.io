@@ -190,7 +190,7 @@ function initModel(waifuPath){
 	
 	$.ajax({
         cache: true,
-        url: waifuPath+'waifu-tips.json',
+        url: SiteIndexUrl+waifuPath+'waifu-tips.json',
         dataType: "json",
         success: function (result){
             $.each(result.mouseover, function (index, tips){
@@ -230,7 +230,7 @@ function loadModel(modelId, modelTexturesId){
     localStorage.setItem('modelId', modelId);
     if (modelTexturesId === undefined) modelTexturesId = 0;
     localStorage.setItem('modelTexturesId', modelTexturesId);
-    loadlive2d('live2d', 'live2d-widget/live2d/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
+    loadlive2d('live2d', SiteIndexUrl+'live2d/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
 }
 
 function loadRandModel(){
@@ -241,7 +241,7 @@ function loadRandModel(){
     
     $.ajax({
         cache: false,
-        url: 'live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
+        url: SiteIndexUrl+'live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
             if (result.textures['id'] == 1 &amp;&amp; (modelTexturesId == 1 || modelTexturesId == 0)) {
@@ -261,7 +261,7 @@ function loadOtherModel(){
     
     $.ajax({
         cache: false,
-        url: 'live2d/'+modelTexturesRandMode+'/?id='+modelId,
+        url: SiteIndexUrl+'live2d/'+modelTexturesRandMode+'/?id='+modelId,
         dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
