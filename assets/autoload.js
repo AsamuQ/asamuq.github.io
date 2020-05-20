@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "http://asamuq.work/live2d-widget/assets/";
+const live2d_path = "https://asamuq.work/assets/";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -33,7 +33,7 @@ if (screen.width &gt;= 768) {
 	]).then(() =&gt; {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			apiPath: "https://live2d.fghrsh.net/api/",
+			apiPath: "https://asamuq.work/live2d/",
 			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
 		});
 	});
