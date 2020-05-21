@@ -1,8 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
-//主要为跨域CORS配置的两大基本信息,Origin和headers
-
 isset($_GET['id']) ? $id = $_GET['id'] : exit('error');
 
 require '../tools/modelList.php';

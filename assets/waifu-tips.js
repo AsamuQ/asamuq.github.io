@@ -1,3 +1,25 @@
+var API = 'https://www.asamuq.work/';
+console.log("                       xelllM                  eelllx           \n                      Me11ll11                Mel11l1p          \n                     Me11loo1M               Me111oo1B          \n                   ixe11vicc1lv             rev1vcco11B         \n                  ixee111cvc11r            rel1vicccivr         \n                  ree111vvvvivro0xMMMx01v rxxvv1cvvvcv1l        \n    ox           Mee1vvvvxM0ol--------------oxMivvvvvvvx        \n  xclvr         MeeevBMic------------------------cxvvovr        \n rvlivl-  vMM  repxMpBvB1or---------------------loe1irop        \nMvv111llrvllr vrBM01r11il1v----------------------BooBleBr       \ner1BrBxxr1vr lB1i11r1lrv1---------------------------v-il-lp     \nxo1oxBeeo1e celiv10i------------- co---  -----    -- --  --r    \n 0xlMxeooex Mevv1i0o-i------iilllioBoccccccccvvlB--e --     B   \nirlvMixeoe1lx1vv1i0iivloooooooopve 1icccccccccccplc1Boococv- B  \n xroi reoopp11v1v1v0iocooooccccl-  -pvvvvvvvvvvi0vlolpcccccooir \n      rooorrrxropvvpoooeccccccei11ov 0lllllvlle1ioie1vlcccccooo-\n     i0olrlvvlvve0c0pcc0ccvcovioccoi- 1oooiiooooocooivovvcccco o\n     Bllpilillivvl11eocoooc1ooccillo           -viilol-lvovvvvpo\n    -1iiovciioiovovviovi1l   -v----l           v-- -ll iovvvvec \n    pv1v0i-iiiiicoico1lli    i-                           i-ll  \n   ollllxiiiiii0c0111ecv1i - -l   i-            i--i   --iiceo  \n   xooooB1iiiiivellleiccivii-  --        o              iivv0i  \n  Meooor  r1vxerppppxiccc0              eci            -eov-c   \n vBoooBv   rxBBBxreixooccvc-    -v1e0pepivv11vv1vi1oooic0Bc1    \n MeeoeM    Mcoolvvivrxiocoxoeeeolliiv1oBll1111i1viiv1o0pexcr    \nireeexv    MioolvBroBriccccpeeviiiiiiivxllllll0iooov1111xcox    \nMBeeer     MioolMloeBpvoccorvvv0ivolB1ixllll1lxllecivBv xcvr    \nMx0eex     r-ov1vvrc0prioco0v1plivl0cxvxepppppB1Bililcpi-cor    \nMBBexv     xioevvviec0B1icclx1epiivil0oxBeoooeo10iiioirlrvxr    \nMBBBMc     xiopvivvMllpMiicoMp00o0Be11lroolollroolop0e0ilcrr    \nMBBBxB     riox1ii1vMoBBpvccppp0e0pppp0rBpppBpp00ol111v-MlxM    \npxBBBr     MlcrviivvMoppxvcclol111lo0BBBBBpBBBppel11111ir0vx    \n");
+/*
+
+    く__,.ヘヽ.　　　　/　,ー､ 〉
+    　　　　　＼ ', !-─‐-i　/　/´
+    　　　 　 ／｀ｰ'　　　 L/／｀ヽ､            Live2D 看板娘 参数设置
+    　　 　 /　 ／,　 /|　 ,　 ,　　　 ',                                           Version 1.4.2
+    　　　ｲ 　/ /-‐/　ｉ　L_ ﾊ ヽ!　 i                            
+    　　　 ﾚ ﾍ 7ｲ｀ﾄ　 ﾚ'ｧ-ﾄ､!ハ|　 |  
+    　　　　 !,/7 '0'　　 ´0iソ| 　 |　　　
+    　　　　 |.从"　　_　　 ,,,, / |./ 　 |             网页添加 Live2D 看板娘
+    　　　　 ﾚ'| i＞.､,,__　_,.イ / 　.i 　|                    https://www.fghrsh.net/post/123.html
+    　　　　　 ﾚ'| | / k_７_/ﾚ'ヽ,　ﾊ.　|           
+    　　　　　　 | |/i 〈|/　 i　,.ﾍ |　i　|    Thanks
+    　　　　　　.|/ /　ｉ： 　 ﾍ!　　＼　|          journey-ad / https://github.com/journey-ad/live2d_src
+    　　　 　 　 kヽ&gt;､ﾊ 　 _,.ﾍ､ 　 /､!            xiazeyu / https://github.com/xiazeyu/live2d-widget.js
+    　　　　　　 !'〈//｀Ｔ´', ＼ ｀'7'ｰr'          Live2d Cubism SDK WebGL 2.1 Projrct &amp; All model authors.
+    　　　　　　 ﾚ'ヽL__|___i,___,ンﾚ|ノ
+    　　　　　 　　　ﾄ-,/　|___./
+    　　　　　 　　　'ｰ'　　!_,.:*********************************************************************************/
+    　　　　　 　　　
 String.prototype.render = function (context) {
     var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
 
@@ -184,13 +206,13 @@ function initModel(waifuPath){
         /* 首次访问加载 指定模型 的 指定材质 */
         
         var modelId = 1;            // 模型 ID
-        var modelTexturesId = 53    // 材质 ID
+        var modelTexturesId = 46    // 材质 ID   水手服(｀・ω・´)
         
     } loadModel(modelId, modelTexturesId);
 	
 	$.ajax({
         cache: true,
-        url: waifuPath+'waifu-tips.json',
+        url: API+'assets/waifu-tips.json',
         dataType: "json",
         success: function (result){
             $.each(result.mouseover, function (index, tips){
@@ -230,7 +252,7 @@ function loadModel(modelId, modelTexturesId){
     localStorage.setItem('modelId', modelId);
     if (modelTexturesId === undefined) modelTexturesId = 0;
     localStorage.setItem('modelTexturesId', modelTexturesId);
-    loadlive2d('live2d', 'live2d/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
+    loadlive2d('live2d', API+'live2d/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
 }
 
 function loadRandModel(){
@@ -241,7 +263,7 @@ function loadRandModel(){
     
     $.ajax({
         cache: false,
-        url: 'live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
+        url: API+'live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
             if (result.textures['id'] == 1 &amp;&amp; (modelTexturesId == 1 || modelTexturesId == 0)) {
@@ -261,7 +283,7 @@ function loadOtherModel(){
     
     $.ajax({
         cache: false,
-        url: 'live2d/'+modelTexturesRandMode+'/?id='+modelId,
+        url: API+'live2d/'+modelTexturesRandMode+'/?id='+modelId,
         dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
