@@ -10,7 +10,7 @@ String.prototype.render = function (context) {
         var currentObject = context;
         var i, length, variable;
 
-        for (i = 0, length = variables.length; i < length; ++i) {
+        for (i = 0, length = variables.length; i &lt; length; ++i) {
             variable = variables[i];
             currentObject = currentObject[variable];
             if (currentObject === undefined || currentObject === null) return '';
@@ -71,21 +71,21 @@ $('.waifu-tool .fui-photo').click(function (){
     
     if (window.location.href == SiteIndexUrl) {      // 如果是主页
         var now = (new Date()).getHours();
-        if (now > 23 || now <= 5) {
+        if (now &gt; 23 || now &lt;= 5) {
             text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛';
-        } else if (now > 5 && now <= 7) {
+        } else if (now &gt; 5 &amp;&amp; now &lt;= 7) {
             text = '早上好！一日之计在于晨，美好的一天就要开始了';
-        } else if (now > 7 && now <= 11) {
+        } else if (now &gt; 7 &amp;&amp; now &lt;= 11) {
             text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
-        } else if (now > 11 && now <= 14) {
+        } else if (now &gt; 11 &amp;&amp; now &lt;= 14) {
             text = '中午了，工作了一个上午，现在是午餐时间！';
-        } else if (now > 14 && now <= 17) {
+        } else if (now &gt; 14 &amp;&amp; now &lt;= 17) {
             text = '午后很容易犯困呢，今天的运动目标完成了吗？';
-        } else if (now > 17 && now <= 19) {
+        } else if (now &gt; 17 &amp;&amp; now &lt;= 19) {
             text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~';
-        } else if (now > 19 && now <= 21) {
+        } else if (now &gt; 19 &amp;&amp; now &lt;= 21) {
             text = '晚上好，今天过得怎么样？';
-        } else if (now > 21 && now <= 23) {
+        } else if (now &gt; 21 &amp;&amp; now &lt;= 23) {
             text = '已经这么晚了呀，早点休息吧，晚安~';
         } else {
             text = '嗨~ 快来逗我玩吧！';
@@ -98,9 +98,9 @@ $('.waifu-tool .fui-photo').click(function (){
             if (window.location.hostname == referrer.hostname) {
                 text = '欢迎阅读<span style="color:#0099cc;">『' + document.title.split(' - ')[0] + '』</span>';
             } else if (domain == 'baidu') {
-                text = 'Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&wd=')[1].split('&')[0] + '</span> 找到的我吗？';
+                text = 'Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&amp;wd=')[1].split('&amp;')[0] + '</span> 找到的我吗？';
             } else if (domain == 'so') {
-                text = 'Hello! 来自 360搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&q=')[1].split('&')[0] + '</span> 找到的我吗？';
+                text = 'Hello! 来自 360搜索 的朋友<br>你是搜索 <span style="color:#0099cc;">' + referrer.search.split('&amp;q=')[1].split('&amp;')[0] + '</span> 找到的我吗？';
             } else if (domain == 'google') {
                 text = 'Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style="color:#0099cc;">『' + document.title.split(' - ')[0] + '』</span>';
             } else {
@@ -143,7 +143,7 @@ function showHitokoto(){
         window.setTimeout(function() {showMessage(text, 3000);}, 5000);
     });
 	/*
-	$.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335',function(result){
+	$.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&amp;uid=3335',function(result){
         var text = '这句一言出处是 <span style="color:#0099cc;">『{source}』</span>，是 <span style="color:#0099cc;">FGHRSH</span> 在 {date} 收藏的！';
         text = text.render({source: result.source, date: result.date});
         showMessage(result.hitokoto, 5000);
@@ -214,8 +214,8 @@ function initModel(waifuPath){
                 var after = tips.date.split('-')[0];
                 var before = tips.date.split('-')[1] || after;
                 
-                if((after.split('/')[0] <= now.getMonth()+1 && now.getMonth()+1 <= before.split('/')[0]) && 
-                   (after.split('/')[1] <= now.getDate() && now.getDate() <= before.split('/')[1])){
+                if((after.split('/')[0] &lt;= now.getMonth()+1 &amp;&amp; now.getMonth()+1 &lt;= before.split('/')[0]) &amp;&amp; 
+                   (after.split('/')[1] &lt;= now.getDate() &amp;&amp; now.getDate() &lt;= before.split('/')[1])){
                     var text = tips.text;
                     if(Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1)-1];
                     text = text.render({year: now.getFullYear()});
@@ -244,7 +244,7 @@ function loadRandModel(){
         url: 'live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
-            if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
+            if (result.textures['id'] == 1 &amp;&amp; (modelTexturesId == 1 || modelTexturesId == 0)) {
                 showMessage('我还没有其他衣服呢', 3000, true);
             } else {
                 showMessage('我的新衣服好看嘛', 3000, true);
@@ -268,4 +268,22 @@ function loadOtherModel(){
             showMessage(result.model['message'], 3000, true);
         }
     });
-}
+}<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
