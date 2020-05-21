@@ -1,4 +1,9 @@
-<?php class modelTextures {
+<?php 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+//主要为跨域CORS配置的两大基本信息,Origin和headers
+
+class modelTextures {
     
     /* 获取材质名称 */
     function get_name($modelName, $id) {

@@ -1,4 +1,9 @@
-<?php class jsonCompatible {
+<?php 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+//主要为跨域CORS配置的两大基本信息,Origin和headers
+
+class jsonCompatible {
     public function json_encode($json) {
         if (version_compare(PHP_VERSION,'5.4.0','<')) {
             $json = json_encode($json);
